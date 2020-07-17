@@ -7,3 +7,24 @@
   flex-direction: column;
   align-items: center;
 }
+
+h1 {
+  width: 90%;
+  background: #F52C07;
+  color: white;
+  text-align: center;
+}
+
+.container {
+  width: 90%;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+}
+
+.divider {
+  width: 2px;
+  height: 90%;
+  background: black;
+}

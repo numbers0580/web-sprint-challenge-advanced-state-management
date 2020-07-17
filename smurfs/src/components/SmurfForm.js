@@ -25,24 +25,48 @@ const SmurfForm = props => {
         setInputs({...inputValue, [name]: value});
     };
 
+    const formStyle = () => {
+        return {
+            mainDiv: {
+                width: '48%',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center'
+            },
+            formDiv: {
+                display: 'flex',
+                margin: '5px 0'
+            },
+            btn: {
+                width: '100px',
+                height: '35px',
+                background: '#F52C07',
+                borderRadius: '16px',
+                color: 'white',
+                fontSize: '1.2rem',
+                fontWeight: 'bold'
+            }
+        };
+    };
+
     return (
-        <div style={{width: '48%', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+        <div style={formStyle().mainDiv}>
             <h2 style={{color: 'white'}}>Welcome New Smurf</h2>
             <form onSubmit={submitForm}>
-                <div style={{display: 'flex', margin: '5px 0'}}>
+                <div style={formStyle().formDiv}>
                     <div style={{width: '60px'}}><label>Name:</label></div>
                     <div><input type='text' name='name' value={inputValue.name} onChange={updateInput} /></div>
                 </div>
-                <div style={{display: 'flex', margin: '5px 0'}}>
+                <div style={formStyle().formDiv}>
                     <div style={{width: '60px'}}><label>Age:</label></div>
                     <div><input type='number' style={{width: '60px'}} name='age' value={inputValue.age} onChange={updateInput} /></div>
                 </div>
-                <div style={{display: 'flex', margin: '5px 0'}}>
+                <div style={formStyle().formDiv}>
                     <div style={{width: '60px'}}><label>Height:</label></div>
                     <div><input type='text' name='height' value={inputValue.height} onChange={updateInput} /></div>
                 </div>
                 <div style={{margin: '5px 0'}}>
-                    <button style={{width: '100px', height: '35px', background: '#F52C07', color: 'white', fontSize: '1.2rem', fontWeight: 'bold'}}>Smurf!</button>
+                    <button style={formStyle().btn}>Smurf!</button>
                 </div>
             </form>
         </div>
