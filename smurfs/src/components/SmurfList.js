@@ -4,8 +4,8 @@ import {fetchSmurfs} from '../actions/smurfActions';
 
 const SmurfList = props => {
     useEffect(() => {
-        setTimeout(() => {props.fetchSmurfs();}, 100);
-        //props.fetchSmurfs();
+        //setTimeout(() => {props.fetchSmurfs();}, 500);
+        props.fetchSmurfs();
     }, []);
 
     const listStyle = () => {
@@ -25,6 +25,8 @@ const SmurfList = props => {
             }
         };
     };
+
+    console.log('About to create Smurf List. Current List:', props.smurfs);
 
     return (
         <div style={listStyle().listContainer}>

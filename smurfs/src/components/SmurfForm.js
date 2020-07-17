@@ -59,7 +59,7 @@ const SmurfForm = props => {
                 </div>
                 <div style={formStyle().formDiv}>
                     <div style={{width: '60px'}}><label>Age:</label></div>
-                    <div><input type='number' style={{width: '60px'}} name='age' value={inputValue.age} onChange={updateInput} /></div>
+                    <div><input type='number' style={{width: '60px'}} name='age' id='age' value={inputValue.age} onChange={updateInput} /></div>
                 </div>
                 <div style={formStyle().formDiv}>
                     <div style={{width: '60px'}}><label>Height:</label></div>

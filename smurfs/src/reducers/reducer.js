@@ -23,13 +23,16 @@ export const reducer = (state = initialState, action) => {
         case FETCH_SMURFS:
             return {...state, findingSmurfs: true}
         case FETCH_SUCCESS:
+            console.log('FETCH_SUCCESS payload:', action.payload);
             return {...state, findingSmurfs: false, smurfs: action.payload}
         case FETCH_FAILED:
             return {...state, findingSmurfs: false, errorMsg: action.payload}
         case ADD_SMURF:
             return {...state, findingSmurfs: true}
         case ADD_SUCCESS:
-            return {...state, findingSmurfs: false, smurfs: [...state.smurfs, action.payload]}
+            console.log('ADD_SUCCESS payloed:', action.payload);
+            //return {...state, findingSmurfs: false, smurfs: [...state.smurfs, action.payload]}
+            return {...state, findingSmurfs: false, smurfs: action.payload}
         case ADD_FAILED:
             return {...state, findingSmurfs: false, errorMsg: action.payload}
         default:
