@@ -13,5 +13,15 @@
     That data can then be accessed by our components.
     
 3. What is the difference between Application state and Component state? When would be a good time to use one over the other?
+    Application state manages data in state globally, whereas Component state only manages that data locally.
+    Application state is preferrable when that data needs to be made available throughout many components in your app.
+    Component state is preferrable when the data only needs to be accessed by a small number of components.
+
 4. Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+    Redux-Thunk is middleware that allows the app to perform asynchronous operations.
+    The Thunk is a function returned by another function.
+
 5. What is your favorite state management system you've learned and this sprint? Please explain why!
+    Currently, I would have to say Redux. While Context API does seem simpler to use, my most recent experience with it included a lot
+    of hand-holding in that Project, so I'm not sure if the simplicity I experienced is deceptive. Whereas with Redux, I've spent
+    many hours fighting with it, but that experience allowed me to get a better understanding of it.
