@@ -13,4 +13,4 @@ const SmurfCard = props => {
     );
 };
 
-export default SmurfCard;
+export default connect()(SmurfCard);

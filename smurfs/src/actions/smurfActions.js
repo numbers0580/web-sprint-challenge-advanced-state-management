@@ -11,7 +11,7 @@ export const ADD_FAILED = 'ADD_FAILED';
 
 export const fetchSmurfs = () => dispatch => {
     dispatch({type: FETCH_SMURFS})
-    axios.get ('http://localhost:3333/smurfs')
+    axios.get('http://localhost:3333/smurfs')
         .then(fetched => {
             console.log('Successfully fetched smurf from localhost API', fetched.data);
             dispatch({type: FETCH_SUCCESS, payload: fetched.data});
@@ -24,7 +24,7 @@ export const fetchSmurfs = () => dispatch => {
 
 export const addSmurf = newSmurf => dispatch => {
     dispatch({type: ADD_SMURF})
-    axios.get ('http://localhost:3333/smurfs', newSmurf)
+    axios.post('http://localhost:3333/smurfs', newSmurf)
         .then(posted => {
             console.log('Successfully added smurf to localhost API', posted.data);
             dispatch({type: ADD_SUCCESS, payload: posted.data});

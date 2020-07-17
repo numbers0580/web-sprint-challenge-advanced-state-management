@@ -5,7 +5,7 @@ import {addSmurf} from '../actions/smurfActions';
 const defaultForm = {
     name: '',
     height: '',
-    age: ''
+    age: 0
 };
 
 const SmurfForm = props => {
